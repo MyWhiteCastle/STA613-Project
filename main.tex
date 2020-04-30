@@ -1,0 +1,118 @@
+\documentclass[a4paper,11pt]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{enumerate}
+%you can add more packages using the same code above
+
+%------------------
+
+%\setlength{\topmargin}{0.0in}
+%\setlength{\textheight}{10in}
+%\setlength{\oddsidemargin}{0.0in}
+%\setlength{\evensidemargin}{0.0in}
+%\setlength{\textwidth}{6.5in}
+
+%-------------------
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem*{example}{Example}
+
+%------------------
+
+%Everything before begin document is called the pre-amble and sets out how the document will look
+%It is recommended you don't touch the pre-amble until you are familiar with LateX
+
+\begin{document}
+	
+\title{CBB540/STA613 Project Report}
+\author{Xinghong Tang}
+\date{May 1st}
+\maketitle
+
+
+%The following code is not run because of the percentage sign, but you might find it useful for future work
+% \tableofcontents
+
+\section{Introduction}
+
+The purpose of this methylation analysis is to identify key factors from maternal smoking and unmeasured exposures associated with maternal age, maternal BMI or maternal education level, and gestational age contributing to a child's methylation level and to investigate the dependency on gender and race for a child's methylation level.
+\newline
+\newline
+Exposure of maternal smoking may affect the epigenetic regulation of imprinted
+genes that are critical to normal growth and development and thereby increase risk of adverse health outcomes.
+%Using the percentage symbol, you can include comments in your code that do not appear in the output.
+
+
+\section{Materials and Methods}
+
+In this analysis, percentage methylation at the IGF2 DMR is used as outcome label. Normally, an individual's methylation fraction is near 50\%. Umbilical
+cord blood samples are taken and methylation level was assayed twice for 294 of the 314 subjects and only once for the remaining 20. In total, there are 608 DNA samples. The samples are sequentially processed on 22 96-well plates. Only a subset of each plate is processed with samples and each plate contains 8 rows and 12 columns.
+\newline
+\newline
+The raw data consists missing data in BMI, birth weight and gender. For 20 subjects with only one measurement, the measurements regarding the second measurement are missing. 
+
+\section{Results}
+
+Some maths, like $\varepsilon>0$ or $a_{23}=\alpha^3$, is written in-line. More important or complex maths is displayed on its own line.
+For example, $$ \lim_{x\to\infty}f(x)=\frac{\pi}{4}.$$
+
+Sometimes you need multiple lines of maths to line up nicely:
+
+\begin{align*}
+f(x+y)&=(x+y,-2(x+y))\\
+&=(x,-2x)+(y,-2y)\\
+&=f(x)+f(y),
+\end{align*}
+
+and sometimes you want to number lines in an equation
+
+\begin{align}
+A^{T} & =\begin{pmatrix}1 & 2\\
+3 & 4
+\end{pmatrix}^{T}\\
+\label{my_eqn}  & =\begin{pmatrix}1 & 3\\
+2 & 4
+\end{pmatrix}
+\end{align}
+
+\section{References and Figures}
+\LaTeX{} \cite{lamport94} also allows you to cite your sources. For more details on how this can be done, we refer the reader to \cite[sec:~Embedded System]{referencing}. But once you have a bibliography, you can use the cite command easily. Finally we add Figure \ref{fig:logo} to show how to add graphics. Note that we first need to make sure to have the graphic uploaded to Overleaf or saved in the same folder as your tex file (whichever is relevant to your case). Notice how the picture was resized using the scale command and that \LaTeX{} determine that the picture looks better above.
+
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.3]{logo-full-colour.png}
+    \caption{The logo for the University of Bristol}
+    \label{fig:logo}
+\end{figure}
+
+
+\begin{thebibliography}{99}
+
+\bibitem{lamport94}
+  Leslie Lamport,
+  \textit{\LaTeX: a document preparation system},
+  Addison Wesley, Massachusetts,
+  2nd edition,
+  1994.
+  
+\bibitem{referencing}
+    Wikibooks,
+    \textit{LaTeX/Bibliography Management},
+    [0nline],
+    Accessed at https://en.wikibooks.org/wiki/LaTeX/Bibliography\_Management,
+    (DATE ACCESSED).
+    
+
+\end{thebibliography}
+
+\end{document}
